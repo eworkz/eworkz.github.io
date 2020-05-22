@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>e42</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>eworkz</title>
+  <style type="text/css">
+    @font-face {
+      font-family: jolly-lodger;
+      src: url(/fonts/JollyLodger-Regular.ttf);
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1 {
+      color: rgb(204, 252, 28);
+      font-family: jolly-lodger;
+      font-size: 55px;
+      font-weight: bold;
+      text-shadow: 4px 3px 3px rgba(43, 14, 96, 1);
+    }
+  </style>
 </head>
 <body>
-<h1>hello, world!</h1>
-<p>e42.xyz coming soon.</p>
+  <h1>eworkz</h1>
+  <p>please enjoy the emptiness while the website is reached.</p>
+  <p>is this a classless layout? view the source to find out.</p>
+  <button onclick="viewSrc()">View Source now?</button>
+  <script type="text/javascript">
+    function viewSrc() {
+      window.open("view-source:"+window.location.href, "_blank");
+    }
+  </script>
 </body>
 </html>
