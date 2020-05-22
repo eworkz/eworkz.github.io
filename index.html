@@ -25,10 +25,28 @@
   <h1>eworkz</h1>
   <p>please enjoy the emptiness while the website is reached.</p>
   <p>is this a classless layout? view the source to find out.</p>
-  <button onclick="viewSrc()">View Source now?</button>
+  <button onclick="newTab()">Open new tab now?</button>
+  <fieldset>
+    <legend>New Tab logger</legend>
+    <div id="msg"></div>
+  </fieldset>
   <script type="text/javascript">
-    function viewSrc() {
-      window.open("view-source:"+window.location.href, "_blank");
+    function newTab() {
+      var nt = window.open(window.location.href, "_blank");
+      setInterval(function() { 
+        try {
+          appendMsg('Location: '+nt.window.location.href); 
+        }
+        catch(err) {
+          appendMsg('You\'ve left the site in the other tab.');
+        }
+      }, 5000);
+    }
+    function appendMsg(msg) {
+      msgDiv = document.getElementById("msg");
+      var p = document.createElement('p');
+      p.innerText = msg
+      msgDiv.append(p);
     }
   </script>
 </body>
